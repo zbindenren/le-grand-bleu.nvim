@@ -6,122 +6,117 @@ function M.get(config)
   local p = require('le-grand-bleu.palette')
 
   local theme = {}
-  local groups = config.groups or {}
+  local g = config.groups or {}
   local styles = {
     -- italic = (config.disable_italics and p.none) or 'italic',
-    vert_split = groups.border,
-    background = groups.background,
-    float_background = groups.panel,
+    vert_split = g.light_blue,
+    background = p.white,
+    float_background = g.light_blue,
   }
   styles.nc_background = styles.background
 
   theme = {
-    ColorColumn = { bg = p.blueGray1 },
+    ColorColumn = { bg = g.blue },
     Conceal = { bg = p.none },
     CurSearch = { link = 'IncSearch' },
-    Cursor = { fg = p.text, bg = p.blue4 },
-    CursorColumn = { bg = p.blue4 },
-    CursorLine = { bg = p.blue4 },
-    CursorLineNr = { fg = p.text },
-    DarkenedPanel = { bg = groups.panel },
-    DarkenedStatusline = { bg = groups.panel },
-    DiffAdd = { bg = blend(groups.git_add, groups.background, 0.5) },
-    DiffChange = { bg = blend(groups.git_change, groups.background, 0.5) },
-    DiffDelete = { bg = blend(groups.git_delete, groups.background, 0.5) },
-    DiffText = { bg = blend(groups.git_text, groups.background, 0.5) },
+    Cursor = { fg = g.text, bg = g.light_blue },
+    CursorColumn = { bg = g.light_blue },
+    CursorLine = { bg = g.light_blue },
+    CursorLineNr = { fg = g.text },
+    DarkenedPanel = { bg = g.panel },
+    DarkenedStatusline = { bg = g.panel },
+    DiffAdd = { bg = blend(g.git_add, g.background, 0.5) },
+    DiffChange = { bg = blend(g.git_change, g.background, 0.5) },
+    DiffDelete = { bg = blend(g.git_delete, g.background, 0.5) },
+    DiffText = { bg = blend(g.git_text, g.background, 0.5) },
     diffAdded = { link = 'DiffAdd' },
     diffChanged = { link = 'DiffChange' },
     diffRemoved = { link = 'DiffDelete' },
-    Directory = { fg = p.blue1, bg = p.none },
-    ErrorMsg = { fg = p.rose0, style = 'bold' },
-    FloatBorder = { fg = groups.border },
-    FloatTitle = { fg = p.blue1 },
-    FoldColumn = { fg = p.blue1 },
-    Folded = { fg = p.text, bg = groups.panel },
-    IncSearch = { fg = p.text, bg = p.blue4 },
-    LineNr = { fg = p.blue3 },
+    Directory = { fg = g.blue, bg = p.none },
+    ErrorMsg = { fg = g.dark_rose, style = 'bold' },
+    FloatBorder = { fg = g.border },
+    FloatTitle = { fg = g.blue },
+    FoldColumn = { fg = g.blue },
+    Folded = { fg = g.text, bg = g.panel },
+    IncSearch = { fg = g.text, bg = g.light_blue },
+    LineNr = { fg = g.blue },
     MatchParen = { fg = p.white, bg = p.black2 },
     ModeMsg = { fg = p.blue3 },
     MoreMsg = { fg = p.blue3 },
     NonText = { fg = p.blue4 },
-    Normal = { fg = p.text, bg = styles.background },
-    NormalFloat = { fg = p.text, bg = styles.float_background },
-    NormalNC = { fg = p.text, bg = styles.nc_background },
-    NvimInternalError = { fg = p.white, bg = p.pink3 },
-    Pmenu = { fg = p.text, bg = styles.float_background },
+    Normal = { fg = g.text, bg = styles.background },
+    NormalFloat = { fg = g.text, bg = styles.float_background },
+    NormalNC = { fg = g.text, bg = styles.nc_background },
+    NvimInternalError = { fg = p.white, bg = g.dark_rose },
+    Pmenu = { fg = g.text, bg = styles.float_background },
     PmenuSbar = { bg = styles.float_background },
-    PmenuSel = { fg = p.text, bg = p.blue3 },
-    PmenuThumb = { bg = p.blue3 },
-    Question = { fg = p.yellow2 },
+    PmenuSel = { fg = g.text, bg = g.light_blue },
+    PmenuThumb = { bg = g.blue },
+    Question = { fg = g.dark_yellow },
     -- QuickFixLine = {},
     -- RedrawDebugNormal = {}
-    RedrawDebugClear = { fg = '#ffffff', bg = p.green0 },
-    RedrawDebugComposed = { fg = '#ffffff', bg = p.black0 },
-    RedrawDebugRecompose = { fg = '#ffffff', bg = p.rose0 },
-    Search = { fg = p.white, bg = p.blue4 },
-    SpecialKey = { fg = p.green3 },
-    SpellBad = { sp = p.rose0, style = 'undercurl' },
-    SpellCap = { sp = p.blue2, style = 'undercurl' },
-    SpellLocal = { sp = p.yellow, style = 'undercurl' },
-    SpellRare = { sp = p.blue2, style = 'undercurl' },
-    SignColumn = { fg = p.text, bg = p.none },
-    StatusLine = { fg = p.blue3, bg = styles.float_background },
-    StatusLineNC = { fg = p.blue3, bg = styles.background },
+    RedrawDebugClear = { fg = p.white, bg = g.dark_rose },
+    RedrawDebugComposed = { fg = p.white, bg = g.black },
+    RedrawDebugRecompose = { fg = p.white, bg = g.black },
+    Search = { fg = p.white, bg = g.blue },
+    SpecialKey = { fg = g.green },
+    SpellBad = { sp = g.dark_rose, style = 'undercurl' },
+    SpellCap = { sp = g.blue, style = 'undercurl' },
+    SpellLocal = { sp = g.yellow, style = 'undercurl' },
+    SpellRare = { sp = g.blue, style = 'undercurl' },
+    SignColumn = { fg = g.text, bg = p.none },
+    StatusLine = { fg = g.blue, bg = styles.float_background },
+    StatusLineNC = { fg = g.blue, bg = styles.background },
     StatusLineTerm = { link = 'StatusLine' },
     StatusLineTermNC = { link = 'StatusLineNC' },
-    TabLine = { fg = p.blue3, bg = styles.float_background },
+    TabLine = { fg = g.blue, bg = styles.float_background },
     TabLineFill = { bg = styles.float_background },
-    TabLineSel = { fg = p.text, bg = p.blue2 },
-    Title = { fg = p.text },
-    VertSplit = { fg = groups.border, bg = styles.vert_split },
-    Visual = { fg = p.text, bg = p.blue4 },
-    -- VisualNOS = {},
-    WarningMsg = { fg = p.yellow },
-    Whitespace = { fg = p.blue4 },
+    TabLineSel = { fg = g.text, bg = g.light_blue },
+    Title = { fg = g.text },
+    VertSplit = { fg = g.border, bg = styles.vert_split },
+    Visual = { fg = p.white, bg = g.blue },
+    WarningMsg = { fg = g.dark_yellow },
+    Whitespace = { fg = g.blue },
     WildMenu = { link = 'IncSearch' },
 
-    -- These groups are not listed as default vim groups,
-    -- but they are defacto standard group names for syntax highlighting.
-    -- commented out groups should chain up to their "preferred" group by
-    -- default,
-    -- Uncomment and edit if you want more specific syntax highlighting.
+    ---
 
-    --   Constant = { fg = p.text },         -- (preferred) any constant
-    --   String = { fg = p.teal1 },          --   a string constant: "this is a string"
-    --   Character = { fg = p.pink3 },       --  a character constant: 'c', '\n'
-    --   Number = { fg = p.teal1 },          --   a number constant: 234, 0xff
-    --   Boolean = { fg = p.teal1 },         --  a boolean constant: TRUE, false
-    --   Float = { fg = p.teal1 },           --    a floating point constant: 2.3e10
-    --
-    --   Identifier = { fg = p.blueGray1 },  -- (preferred) any variable name
-    --   Function = { fg = p.blue2 },        -- function name (also: methods for classes)
-    --
-    --   Statement = { fg = p.text },        -- (preferred) any statement
-    --   Conditional = { fg = p.blueGray1 }, --  if, then, else, endif, switch, etc.
-    --   Repeat = { fg = p.blue3 },          --   for, do, while, etc.
-    --   Label = { fg = p.text },            --    case, default, etc.
-    --   Operator = { fg = p.blue2 },        -- "sizeof", "+", "*", etc.
-    --   Keyword = { fg = p.blue3 },         --  any other keyword
-    --   Exception = { fg = p.blue3 },       --  try, catch, throw
-    --
-    --   PreProc = { fg = p.text },          -- (preferred) generic Preprocessor
-    --   Include = { fg = p.blueGray1 },     --  preprocessor #include
-    --
-    --   Type = { fg = p.blueGray1 }, -- (preferred) int, long, char, etc.
-    --
-    --   Special = { fg = p.blueGray2 },        -- (preferred) any special symbol
-    --   Tag = { fg = p.text },                 --    you can use CTRL-] on this
-    --   Delimiter = { fg = p.blueGray1 },      --  character that needs attention
-    --   SpecialComment = { fg = p.blueGray1 }, -- special things inside a comment
-    --
-    --   Comment = { fg = p.blueGray1 },       -- (preferred) any special symbol
-    --
-    --   Underlined = { style = 'underline' }, -- (preferred) text that stands out, HTML links
-    --   Bold = { style = 'bold' },
-    --   Italic = { style = 'italic' },
-    --
-    --   Error = { fg = p.pink3 },                     -- (preferred) any erroneous construct
-    --   Todo = { bg = p.yellow, fg = p.background3 }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Constant = { fg = g.text, style = 'bold' }, -- (preferred) any constant
+    String = { fg = g.text },                   --   a string constant: "this is a string"
+    Character = { fg = g.text },                --  a character constant: 'c', '\n'
+    Number = { fg = g.text },                   --   a number constant: 234, 0xff
+    Boolean = { fg = g.text },                  --  a boolean constant: TRUE, false
+    Float = { fg = g.text },                    --    a floating point constant: 2.3e10
+
+    Identifier = { fg = g.text },               -- (preferred) any variable name
+    Function = { link = 'Constant' },           -- function name (also: methods for classes)
+
+    Statement = { fg = g.text },                -- (preferred) any statement
+    Conditional = { link = 'Constant' },        --  if, then, else, endif, switch, etc.
+    Repeat = { link = 'Constant' },             --   for, do, while, etc.
+    Label = { fg = p.text },                    --    case, default, etc.
+    Operator = { link = 'Constant' },           -- "sizeof", "+", "*", etc.
+    Keyword = { link = 'Constant' },            --  any other keyword
+    Exception = { link = 'Constant' },          --  try, catch, throw
+
+    PreProc = { fg = g.text },                  -- (preferred) generic Preprocessor
+    Include = { fg = g.text },                  --  preprocessor #include
+
+    Type = { link = 'Constant' },               -- (preferred) int, long, char, etc.
+
+    Special = { fg = g.text },                  -- (preferred) any special symbol
+    Tag = { fg = g.text },                      --    you can use CTRL-] on this
+    Delimiter = { fg = g.blueGray1 },           --  character that needs attention
+    Comment = { fg = g.blue },                  -- (preferred) any special symbol
+
+    SpecialComment = { link = 'Comment' },      -- special things inside a comment
+
+
+    Underlined = { style = 'underline' }, -- (preferred) text that stands out, HTML links
+    Bold = { style = 'bold' },
+    Italic = { style = 'italic' },
+
+    Error = { fg = g.dark_rose }, -- (preferred) any erroneous construct
     --
     --   qfLineNr = { fg = p.blueGray3 },
     --   qfFileName = { fg = p.blueGray2 },
@@ -147,34 +142,34 @@ function M.get(config)
     --
     --   debugPC = { bg = p.background1 },                       -- used for highlighting the current line in terminal-debug
     --   debugBreakpoint = { bg = p.background2, fg = p.pink3 }, -- used for breakpoint colors in terminal-debug
-    --   DiagnosticError = { fg = groups.error },
-    --   DiagnosticHint = { fg = groups.hint },
-    --   DiagnosticInfo = { fg = groups.info },
-    --   DiagnosticWarn = { fg = groups.warn },
-    --   DiagnosticDefaultError = { fg = groups.error },
-    --   DiagnosticDefaultHint = { fg = groups.hint },
-    --   DiagnosticDefaultInfo = { fg = groups.info },
-    --   DiagnosticDefaultWarn = { fg = groups.warn },
-    --   DiagnosticFloatingError = { fg = groups.error },
-    --   DiagnosticFloatingHint = { fg = groups.hint },
-    --   DiagnosticFloatingInfo = { fg = groups.info },
-    --   DiagnosticFloatingWarn = { fg = groups.warn },
-    --   DiagnosticSignError = { fg = groups.error },
-    --   DiagnosticSignHint = { fg = groups.hint },
-    --   DiagnosticSignInfo = { fg = groups.info },
-    --   DiagnosticSignWarn = { fg = groups.warn },
-    --   DiagnosticStatusLineError = { fg = groups.error, bg = groups.panel },
-    --   DiagnosticStatusLineHint = { fg = groups.hint, bg = groups.panel },
-    --   DiagnosticStatusLineInfo = { fg = groups.info, bg = groups.panel },
-    --   DiagnosticStatusLineWarn = { fg = groups.warn, bg = groups.panel },
-    --   DiagnosticUnderlineError = { sp = groups.error, style = 'undercurl' },
-    --   DiagnosticUnderlineHint = { sp = groups.hint, style = 'undercurl' },
-    --   DiagnosticUnderlineInfo = { sp = groups.info, style = 'undercurl' },
-    --   DiagnosticUnderlineWarn = { sp = groups.warn, style = 'undercurl' },
-    --   DiagnosticVirtualTextError = { fg = groups.error },
-    --   DiagnosticVirtualTextHint = { fg = groups.hint },
-    --   DiagnosticVirtualTextInfo = { fg = groups.info },
-    --   DiagnosticVirtualTextWarn = { fg = groups.warn },
+    --   DiagnosticError = { fg = g.error },
+    --   DiagnosticHint = { fg = g.hint },
+    --   DiagnosticInfo = { fg = g.info },
+    --   DiagnosticWarn = { fg = g.warn },
+    --   DiagnosticDefaultError = { fg = g.error },
+    --   DiagnosticDefaultHint = { fg = g.hint },
+    --   DiagnosticDefaultInfo = { fg = g.info },
+    --   DiagnosticDefaultWarn = { fg = g.warn },
+    --   DiagnosticFloatingError = { fg = g.error },
+    --   DiagnosticFloatingHint = { fg = g.hint },
+    --   DiagnosticFloatingInfo = { fg = g.info },
+    --   DiagnosticFloatingWarn = { fg = g.warn },
+    --   DiagnosticSignError = { fg = g.error },
+    --   DiagnosticSignHint = { fg = g.hint },
+    --   DiagnosticSignInfo = { fg = g.info },
+    --   DiagnosticSignWarn = { fg = g.warn },
+    --   DiagnosticStatusLineError = { fg = g.error, bg = groups.panel },
+    --   DiagnosticStatusLineHint = { fg = g.hint, bg = groups.panel },
+    --   DiagnosticStatusLineInfo = { fg = g.info, bg = groups.panel },
+    --   DiagnosticStatusLineWarn = { fg = g.warn, bg = groups.panel },
+    --   DiagnosticUnderlineError = { sp = g.error, style = 'undercurl' },
+    --   DiagnosticUnderlineHint = { sp = g.hint, style = 'undercurl' },
+    --   DiagnosticUnderlineInfo = { sp = g.info, style = 'undercurl' },
+    --   DiagnosticUnderlineWarn = { sp = g.warn, style = 'undercurl' },
+    --   DiagnosticVirtualTextError = { fg = g.error },
+    --   DiagnosticVirtualTextHint = { fg = g.hint },
+    --   DiagnosticVirtualTextInfo = { fg = g.info },
+    --   DiagnosticVirtualTextWarn = { fg = g.warn },
     --
     --   -- Treesitter
     --   ['@variable'] = { fg = p.text },
@@ -214,8 +209,8 @@ function M.get(config)
     --   ['@parameter'] = { fg = p.text },
     --   -- TSParameterReference = {},
     --   ['@property'] = { fg = p.blue2 },
-    --   ['@punctuation.delimiter'] = { fg = groups.punctuation },
-    --   ['@punctuation.special'] = { fg = groups.punctuation },
+    --   ['@punctuation.delimiter'] = { fg = g.punctuation },
+    --   ['@punctuation.special'] = { fg = g.punctuation },
     --   ['@punctuation.bracket'] = { fg = p.text },
     --   -- TSRepeat = {},
     --   -- TSStrike = {},
@@ -228,10 +223,10 @@ function M.get(config)
     --   ['@tag.delimiter'] = { fg = p.text },
     --   ['@tag.attribute'] = { fg = p.blue3, style = styles.italic },
     --   ['@text'] = { fg = p.text },
-    --   ['@title'] = { fg = groups.headings.h1, style = 'bold' },
+    --   ['@title'] = { fg = g.headings.h1, style = 'bold' },
     --   ['@type'] = { link = 'Type' },
     --   ['@type.builtin'] = { link = 'Type' },
-    --   TSURI = { fg = groups.link },
+    --   TSURI = { fg = g.link },
     --   -- TSUnderline = {},
     --
     --   -- tsx
@@ -298,7 +293,7 @@ function M.get(config)
     --   BufferInactiveMod = { fg = p.teal1 },
     --   BufferInactiveSign = { fg = p.blueGray2 },
     --   BufferInactiveTarget = { fg = p.yellow },
-    --   BufferTabpageFill = { fg = groups.background, bg = groups.background },
+    --   BufferTabpageFill = { fg = g.background, bg = groups.background },
     --   BufferVisible = { fg = p.blueGray1 },
     --   BufferVisibleIndex = { fg = p.blueGray1 },
     --   BufferVisibleMod = { fg = p.teal1 },
@@ -306,9 +301,9 @@ function M.get(config)
     --   BufferVisibleTarget = { fg = p.yellow },
     --
     --   -- lewis6991/gitsigns.nvim
-    --   GitSignsAdd = { fg = groups.git_add },
-    --   GitSignsChange = { fg = groups.git_change },
-    --   GitSignsDelete = { fg = groups.git_delete },
+    --   GitSignsAdd = { fg = g.git_add },
+    --   GitSignsChange = { fg = g.git_change },
+    --   GitSignsDelete = { fg = g.git_delete },
     --   SignAdd = { link = 'GitSignsAdd' },
     --   SignChange = { link = 'GitSignsChange' },
     --   SignDelete = { link = 'GitSignsDelete' },
@@ -329,27 +324,27 @@ function M.get(config)
     --   NvimTreeFileStaged = { fg = p.blue1 },
     --   NvimTreeFolderIcon = { fg = p.blue3 },
     --   NvimTreeFolderName = { fg = p.blue3 },
-    --   NvimTreeGitDeleted = { fg = groups.git_delete },
-    --   NvimTreeGitDirty = { fg = groups.git_dirty },
-    --   NvimTreeGitIgnored = { fg = groups.git_ignore },
-    --   NvimTreeGitMerge = { fg = groups.git_merge },
-    --   NvimTreeGitNew = { fg = groups.git_add },
-    --   NvimTreeGitRenamed = { fg = groups.git_rename },
-    --   NvimTreeGitStaged = { fg = groups.git_stage },
+    --   NvimTreeGitDeleted = { fg = g.git_delete },
+    --   NvimTreeGitDirty = { fg = g.git_dirty },
+    --   NvimTreeGitIgnored = { fg = g.git_ignore },
+    --   NvimTreeGitMerge = { fg = g.git_merge },
+    --   NvimTreeGitNew = { fg = g.git_add },
+    --   NvimTreeGitRenamed = { fg = g.git_rename },
+    --   NvimTreeGitStaged = { fg = g.git_stage },
     --   NvimTreeImageFile = { fg = p.text },
     --   NvimTreeNormal = { fg = p.text },
     --   NvimTreeOpenedFile = { fg = p.text, bg = p.background1 },
     --   NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' },
     --   NvimTreeRootFolder = { fg = p.teal1 },
     --   NvimTreeSpecialFile = { link = 'NvimTreeNormal' },
-    --   NvimTreeWindowPicker = { fg = groups.bg, bg = p.blueGray1 },
+    --   NvimTreeWindowPicker = { fg = g.bg, bg = p.blueGray1 },
     --
     --   -- folke/which-key.nvim
     --   WhichKey = { fg = p.text },
     --   WhichKeyGroup = { fg = p.text },
     --   WhichKeySeparator = { fg = p.text },
     --   WhichKeyDesc = { fg = p.text },
-    --   WhichKeyFloat = { bg = groups.panel },
+    --   WhichKeyFloat = { bg = g.panel },
     --   WhichKeyValue = { fg = p.text },
     --
     --   -- luka-reineke/indent-blankline.nvim

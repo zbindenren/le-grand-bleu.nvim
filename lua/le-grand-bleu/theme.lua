@@ -25,10 +25,10 @@ function M.get(config)
     CursorLineNr         = { fg = g.text },
     DarkenedPanel        = { bg = g.panel },
     DarkenedStatusline   = { bg = g.panel },
-    DiffAdd              = { bg = blend(g.git_add, g.background, 0.5) },
-    DiffChange           = { bg = blend(g.git_change, g.background, 0.5) },
-    DiffDelete           = { bg = blend(g.git_delete, g.background, 0.5) },
-    DiffText             = { bg = blend(g.git_text, g.background, 0.5) },
+    DiffAdd              = { fg = g.text, bg = g.git_add_bg },
+    DiffChange           = { fg = g.text, bg = g.git_change_bg },
+    DiffDelete           = { fg = g.text, bg = g.git_delete_bg },
+    DiffText             = { link = 'DiffChange' },
     diffAdded            = { link = 'DiffAdd' },
     diffChanged          = { link = 'DiffChange' },
     diffRemoved          = { link = 'DiffDelete' },
@@ -359,6 +359,17 @@ function M.get(config)
     NotifyERRORBorder                 = { fg = g.dark_rose },
     NotifyERRORTitle                  = { link = 'NotifyERRORBorder' },
     NotifyERRORIcon                   = { link = 'NotifyERRORBorder' },
+    --
+    --   -- TimUntersberger/neogit
+    NeogitDiffAdd                     = { link = 'DiffAdd' },
+    NeogitDiffAddHighlight            = { link = 'DiffAdd' },
+    NeogitDiffChange                  = { link = 'DiffChange' },
+    NeogitDiffChangeHighlight         = { link = 'DiffChange' },
+    NeogitDiffDelete                  = { link = 'DiffDelete' },
+    NeogitDiffDeleteHighlight         = { link = 'DiffDelete' },
+    NeogitDiffText                    = { link = 'DiffText' },
+    NeogitDiffTextHighlight           = { link = 'DiffText' },
+    NeogitDiffContextHighlight        = { link = 'Normal' },
   }
   --
   -- vim.g.terminal_color_0 = p.background3 -- black

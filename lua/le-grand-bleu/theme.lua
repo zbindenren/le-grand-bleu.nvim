@@ -16,100 +16,100 @@ function M.get(config)
   styles.nc_background = styles.background
 
   theme = {
-    ColorColumn = { bg = g.blue },
-    Conceal = { bg = p.none },
-    CurSearch = { link = 'IncSearch' },
-    Cursor = { fg = g.text, bg = g.light_blue },
-    CursorColumn = { bg = g.light_blue },
-    CursorLine = { bg = g.light_blue },
-    CursorLineNr = { fg = g.text },
-    DarkenedPanel = { bg = g.panel },
-    DarkenedStatusline = { bg = g.panel },
-    DiffAdd = { bg = blend(g.git_add, g.background, 0.5) },
-    DiffChange = { bg = blend(g.git_change, g.background, 0.5) },
-    DiffDelete = { bg = blend(g.git_delete, g.background, 0.5) },
-    DiffText = { bg = blend(g.git_text, g.background, 0.5) },
-    diffAdded = { link = 'DiffAdd' },
-    diffChanged = { link = 'DiffChange' },
-    diffRemoved = { link = 'DiffDelete' },
-    Directory = { fg = g.blue, bg = p.none },
-    ErrorMsg = { fg = g.dark_rose, style = 'bold' },
-    FloatBorder = { fg = g.border },
-    FloatTitle = { fg = g.blue },
-    FoldColumn = { fg = g.blue },
-    Folded = { fg = g.text, bg = g.panel },
-    IncSearch = { fg = g.text, bg = g.light_blue },
-    LineNr = { fg = g.blue },
-    MatchParen = { fg = p.white, bg = p.black2 },
-    ModeMsg = { fg = p.blue3 },
-    MoreMsg = { fg = p.blue3 },
-    NonText = { fg = p.blue4 },
-    Normal = { fg = g.text, bg = styles.background },
-    NormalFloat = { fg = g.text, bg = styles.float_background },
-    NormalNC = { fg = g.text, bg = styles.nc_background },
-    NvimInternalError = { fg = p.white, bg = g.dark_rose },
-    Pmenu = { fg = g.text, bg = styles.float_background },
-    PmenuSbar = { bg = styles.float_background },
-    PmenuSel = { fg = g.text, bg = g.light_blue },
-    PmenuThumb = { bg = g.blue },
-    Question = { fg = g.dark_yellow },
+    ColorColumn          = { bg = g.blue },
+    Conceal              = { bg = p.none },
+    CurSearch            = { link = 'IncSearch' },
+    Cursor               = { fg = g.text, bg = g.light_blue },
+    CursorColumn         = { bg = g.light_blue },
+    CursorLine           = { bg = g.light_blue },
+    CursorLineNr         = { fg = g.text },
+    DarkenedPanel        = { bg = g.panel },
+    DarkenedStatusline   = { bg = g.panel },
+    DiffAdd              = { bg = blend(g.git_add, g.background, 0.5) },
+    DiffChange           = { bg = blend(g.git_change, g.background, 0.5) },
+    DiffDelete           = { bg = blend(g.git_delete, g.background, 0.5) },
+    DiffText             = { bg = blend(g.git_text, g.background, 0.5) },
+    diffAdded            = { link = 'DiffAdd' },
+    diffChanged          = { link = 'DiffChange' },
+    diffRemoved          = { link = 'DiffDelete' },
+    Directory            = { fg = g.blue, bg = p.none },
+    ErrorMsg             = { fg = g.dark_rose, style = 'bold' },
+    FloatBorder          = { fg = g.border },
+    FloatTitle           = { fg = g.blue },
+    FoldColumn           = { fg = g.blue },
+    Folded               = { fg = g.text, bg = g.panel },
+    IncSearch            = { fg = g.text, bg = g.light_blue },
+    LineNr               = { fg = g.blue },
+    MatchParen           = { fg = p.white, bg = p.black2 },
+    ModeMsg              = { fg = p.blue3 },
+    MoreMsg              = { fg = p.blue3 },
+    NonText              = { fg = p.blue4 },
+    Normal               = { fg = g.text, bg = styles.background },
+    NormalFloat          = { fg = g.text, bg = styles.float_background },
+    NormalNC             = { fg = g.text, bg = styles.nc_background },
+    NvimInternalError    = { fg = p.white, bg = g.dark_rose },
+    Pmenu                = { fg = g.text, bg = styles.float_background },
+    PmenuSbar            = { bg = styles.float_background },
+    PmenuSel             = { fg = g.text, bg = g.light_blue },
+    PmenuThumb           = { bg = g.blue },
+    Question             = { fg = g.dark_yellow },
     -- QuickFixLine = {},
     -- RedrawDebugNormal = {}
-    RedrawDebugClear = { fg = p.white, bg = g.dark_rose },
-    RedrawDebugComposed = { fg = p.white, bg = g.black },
+    RedrawDebugClear     = { fg = p.white, bg = g.dark_rose },
+    RedrawDebugComposed  = { fg = p.white, bg = g.black },
     RedrawDebugRecompose = { fg = p.white, bg = g.black },
-    Search = { fg = p.white, bg = g.blue },
-    SpecialKey = { fg = g.green },
-    SpellBad = { sp = g.dark_rose, style = 'undercurl' },
-    SpellCap = { sp = g.blue, style = 'undercurl' },
-    SpellLocal = { sp = g.yellow, style = 'undercurl' },
-    SpellRare = { sp = g.blue, style = 'undercurl' },
-    SignColumn = { fg = g.text, bg = p.none },
-    StatusLine = { fg = g.blue, bg = styles.float_background },
-    StatusLineNC = { fg = g.blue, bg = styles.background },
-    StatusLineTerm = { link = 'StatusLine' },
-    StatusLineTermNC = { link = 'StatusLineNC' },
-    TabLine = { fg = g.blue, bg = styles.float_background },
-    TabLineFill = { bg = styles.float_background },
-    TabLineSel = { fg = g.text, bg = g.light_blue },
-    Title = { fg = g.text },
-    VertSplit = { fg = g.border, bg = styles.vert_split },
-    Visual = { fg = p.white, bg = g.blue },
-    WarningMsg = { fg = g.dark_yellow },
-    Whitespace = { fg = g.blue },
-    WildMenu = { link = 'IncSearch' },
+    Search               = { fg = p.white, bg = g.blue },
+    SpecialKey           = { fg = g.green },
+    SpellBad             = { sp = g.dark_rose, style = 'undercurl' },
+    SpellCap             = { sp = g.blue, style = 'undercurl' },
+    SpellLocal           = { sp = g.yellow, style = 'undercurl' },
+    SpellRare            = { sp = g.blue, style = 'undercurl' },
+    SignColumn           = { fg = g.text, bg = p.none },
+    StatusLine           = { fg = g.blue, bg = styles.float_background },
+    StatusLineNC         = { fg = g.blue, bg = styles.background },
+    StatusLineTerm       = { link = 'StatusLine' },
+    StatusLineTermNC     = { link = 'StatusLineNC' },
+    TabLine              = { fg = g.blue, bg = styles.float_background },
+    TabLineFill          = { bg = styles.float_background },
+    TabLineSel           = { fg = g.text, bg = g.light_blue },
+    Title                = { fg = g.text },
+    Visual               = { fg = p.white, bg = g.blue },
+    WarningMsg           = { fg = g.dark_yellow },
+    Whitespace           = { fg = g.blue },
+    WildMenu             = { link = 'IncSearch' },
+    WinSeparator         = { fg = g.border, bg = g.light_blue },
 
     ---
 
-    Constant = { fg = g.text, style = 'bold' }, -- (preferred) any constant
-    String = { fg = g.text },                   --   a string constant: "this is a string"
-    Character = { fg = g.text },                --  a character constant: 'c', '\n'
-    Number = { fg = g.text },                   --   a number constant: 234, 0xff
-    Boolean = { fg = g.text },                  --  a boolean constant: TRUE, false
-    Float = { fg = g.text },                    --    a floating point constant: 2.3e10
+    Constant             = { fg = g.text, style = 'bold' }, -- (preferred) any constant
+    String               = { fg = g.text },                 --   a string constant: "this is a string"
+    Character            = { fg = g.text },                 --  a character constant: 'c', '\n'
+    Number               = { fg = g.text },                 --   a number constant: 234, 0xff
+    Boolean              = { fg = g.text },                 --  a boolean constant: TRUE, false
+    Float                = { fg = g.text },                 --    a floating point constant: 2.3e10
 
-    Identifier = { fg = g.text },               -- (preferred) any variable name
-    Function = { link = 'Constant' },           -- function name (also: methods for classes)
+    Identifier           = { fg = g.text },                 -- (preferred) any variable name
+    Function             = { link = 'Constant' },           -- function name (also: methods for classes)
 
-    Statement = { fg = g.text },                -- (preferred) any statement
-    Conditional = { link = 'Constant' },        --  if, then, else, endif, switch, etc.
-    Repeat = { link = 'Constant' },             --   for, do, while, etc.
-    Label = { fg = p.text },                    --    case, default, etc.
-    Operator = { link = 'Constant' },           -- "sizeof", "+", "*", etc.
-    Keyword = { link = 'Constant' },            --  any other keyword
-    Exception = { link = 'Constant' },          --  try, catch, throw
+    Statement            = { fg = g.text },                 -- (preferred) any statement
+    Conditional          = { link = 'Constant' },           --  if, then, else, endif, switch, etc.
+    Repeat               = { link = 'Constant' },           --   for, do, while, etc.
+    Label                = { fg = p.text },                 --    case, default, etc.
+    Operator             = { link = 'Constant' },           -- "sizeof", "+", "*", etc.
+    Keyword              = { link = 'Constant' },           --  any other keyword
+    Exception            = { link = 'Constant' },           --  try, catch, throw
 
-    PreProc = { fg = g.text },                  -- (preferred) generic Preprocessor
-    Include = { fg = g.text },                  --  preprocessor #include
+    PreProc              = { fg = g.text },                 -- (preferred) generic Preprocessor
+    Include              = { fg = g.text },                 --  preprocessor #include
 
-    Type = { link = 'Constant' },               -- (preferred) int, long, char, etc.
+    Type                 = { link = 'Constant' },           -- (preferred) int, long, char, etc.
 
-    Special = { fg = g.text },                  -- (preferred) any special symbol
-    Tag = { fg = g.text },                      --    you can use CTRL-] on this
-    Delimiter = { fg = g.text },                --  character that needs attention
-    Comment = { fg = g.blue },                  -- (preferred) any special symbol
+    Special              = { fg = g.text },                 -- (preferred) any special symbol
+    Tag                  = { fg = g.text },                 --    you can use CTRL-] on this
+    Delimiter            = { fg = g.text },                 --  character that needs attention
+    Comment              = { fg = g.blue },                 -- (preferred) any special symbol
 
-    SpecialComment = { link = 'Comment' },      -- special things inside a comment
+    SpecialComment       = { link = 'Comment' },            -- special things inside a comment
 
 
     Underlined                 = { style = 'underline' }, -- (preferred) text that stands out, HTML links
@@ -233,35 +233,26 @@ function M.get(config)
     ['@variable.builtin']      = { link = 'Identifier' },
     --
     --   -- lua
-    --   luaTSConstructor = { fg = p.blueGray1 },
+    luaTSConstructor           = { link = 'Constant' },
     --
     --   -- css
-    --   cssTSFunction = { fg = p.blueGray1 },
-    --   cssTSProperty = { fg = p.blue2 },
-    --   cssTSType = { fg = p.teal1 },
-    --   cssTSKeyword = { fg = p.blueGray1 },
-    --   cssClassName = { fg = p.teal2, style = styles.italic },
-    --   cssPseudoClass = { fg = p.blue3, style = styles.italic },
-    --   cssDefinition = { fg = p.blue2 },
-    --   cssTSError = { link = 'cssClassName' },
+    cssTSFunction              = { link = 'Identifier' },
+    cssTSProperty              = { link = 'Identifier' },
+    cssTSType                  = { link = 'Constant' },
+    cssTSKeyword               = { link = 'Constant' },
+    cssClassName               = { link = 'Identifier' },
+    cssPseudoClass             = { link = 'Identifier' },
+    cssDefinition              = { link = 'Identifier' },
+    cssTSError                 = { link = 'cssClassName' },
     --
     --   -- vim.lsp.buf.document_highlight()
-    --   LspReferenceText = { bg = p.blue2 },
-    --   LspReferenceRead = { bg = p.blue2 },
-    --   LspReferenceWrite = { bg = p.blue2 },
+    LspReferenceText           = { bg = g.blue },
+    LspReferenceRead           = { bg = g.blue },
+    LspReferenceWrite          = { bg = g.blue },
     --
     --   -- lsp-highlight-codelens
-    --   LspCodeLens = { fg = p.blueGray1 },          -- virtual text of code lens
-    --   LspCodeLensSeparator = { fg = p.blueGray3 }, -- separator between two or more code lens
-    --
-    --   -- nvim-ts-rainbow
-    --   rainbowcol1 = { fg = p.blue1 },
-    --   rainbowcol2 = { fg = p.teal1 },
-    --   rainbowcol3 = { fg = p.yellow },
-    --   rainbowcol4 = { fg = p.blue2 },
-    --   rainbowcol5 = { fg = p.teal2 },
-    --   rainbowcol6 = { fg = p.pink3 },
-    --   rainbowcol7 = { fg = p.blue3 },
+    LspCodeLens                = { fg = g.blue },       -- virtual text of code lens
+    LspCodeLensSeparator       = { fg = g.light_blue }, -- separator between two or more code lens
     --
     --   -- romgrk/barbar.nvim
     --   BufferCurrent = { fg = p.text, bg = p.background2 },
@@ -282,51 +273,45 @@ function M.get(config)
     --   BufferVisibleTarget = { fg = p.yellow },
     --
     --   -- lewis6991/gitsigns.nvim
-    --   GitSignsAdd = { fg = g.git_add },
-    --   GitSignsChange = { fg = g.git_change },
-    --   GitSignsDelete = { fg = g.git_delete },
-    --   SignAdd = { link = 'GitSignsAdd' },
-    --   SignChange = { link = 'GitSignsChange' },
-    --   SignDelete = { link = 'GitSignsDelete' },
-    --
-    --   -- mvllow/modes.nvim
-    --   ModesCopy = { bg = p.yellow },
-    --   ModesDelete = { bg = p.pink3 },
-    --   ModesInsert = { bg = p.teal1 },
-    --   ModesVisual = { bg = p.yellow },
+    GitSignsAdd                = { fg = g.git_add },
+    GitSignsChange             = { fg = g.git_change },
+    GitSignsDelete             = { fg = g.git_delete },
+    SignAdd                    = { link = 'GitSignsAdd' },
+    SignChange                 = { link = 'GitSignsChange' },
+    SignDelete                 = { link = 'GitSignsDelete' },
     --
     --   -- kyazdani42/nvim-tree.lua
-    --   NvimTreeEmptyFolderName = { fg = p.blueGray3 },
-    --   NvimTreeFileDeleted = { fg = p.pink3 },
-    --   NvimTreeFileDirty = { fg = p.blue4 },
-    --   NvimTreeFileMerge = { fg = p.blue2 },
-    --   NvimTreeFileNew = { fg = p.teal1 },
-    --   NvimTreeFileRenamed = { fg = p.blueGray3 },
-    --   NvimTreeFileStaged = { fg = p.blue1 },
-    --   NvimTreeFolderIcon = { fg = p.blue3 },
-    --   NvimTreeFolderName = { fg = p.blue3 },
-    --   NvimTreeGitDeleted = { fg = g.git_delete },
-    --   NvimTreeGitDirty = { fg = g.git_dirty },
-    --   NvimTreeGitIgnored = { fg = g.git_ignore },
-    --   NvimTreeGitMerge = { fg = g.git_merge },
-    --   NvimTreeGitNew = { fg = g.git_add },
-    --   NvimTreeGitRenamed = { fg = g.git_rename },
-    --   NvimTreeGitStaged = { fg = g.git_stage },
-    --   NvimTreeImageFile = { fg = p.text },
-    --   NvimTreeNormal = { fg = p.text },
-    --   NvimTreeOpenedFile = { fg = p.text, bg = p.background1 },
-    --   NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' },
-    --   NvimTreeRootFolder = { fg = p.teal1 },
-    --   NvimTreeSpecialFile = { link = 'NvimTreeNormal' },
-    --   NvimTreeWindowPicker = { fg = g.bg, bg = p.blueGray1 },
+    NvimTreeEmptyFolderName    = { fg = g.light_blue },
+    NvimTreeFileDeleted        = { fg = g.dark_rose },
+    NvimTreeFileDirty          = { fg = g.blue },
+    NvimTreeFileMerge          = { fg = g.light_blue },
+    NvimTreeFileNew            = { fg = g.dark_yellow },
+    NvimTreeFileRenamed        = { fg = g.grey },
+    NvimTreeFileStaged         = { fg = g.dark_green },
+    NvimTreeFolderIcon         = { fg = g.blue },
+    NvimTreeFolderName         = { fg = g.blue },
+    NvimTreeGitDeleted         = { fg = g.git_delete },
+    NvimTreeGitDirty           = { fg = g.git_dirty },
+    NvimTreeGitIgnored         = { fg = g.git_ignore },
+    NvimTreeGitMerge           = { fg = g.git_merge },
+    NvimTreeGitNew             = { fg = g.git_add },
+    NvimTreeGitRenamed         = { fg = g.git_rename },
+    NvimTreeGitStaged          = { fg = g.git_stage },
+    NvimTreeImageFile          = { fg = g.text },
+    NvimTreeNormal             = { fg = g.text },
+    NvimTreeOpenedFile         = { fg = g.text, bg = g.light_blue },
+    NvimTreeOpenedFolderName   = { link = 'NvimTreeFolderName' },
+    NvimTreeRootFolder         = { fg = g.blue },
+    NvimTreeSpecialFile        = { link = 'NvimTreeNormal' },
+    NvimTreeWindowPicker       = { fg = g.text, bg = g.light_blue },
     --
     --   -- folke/which-key.nvim
-    --   WhichKey = { fg = p.text },
-    --   WhichKeyGroup = { fg = p.text },
-    --   WhichKeySeparator = { fg = p.text },
-    --   WhichKeyDesc = { fg = p.text },
-    --   WhichKeyFloat = { bg = g.panel },
-    --   WhichKeyValue = { fg = p.text },
+    WhichKey                   = { fg = g.text },
+    WhichKeyGroup              = { fg = g.text },
+    WhichKeySeparator          = { fg = g.text },
+    WhichKeyDesc               = { fg = g.text },
+    WhichKeyFloat              = { bg = g.panel },
+    WhichKeyValue              = { fg = g.text },
     --
     --   -- luka-reineke/indent-blankline.nvim
     --   IndentBlanklineChar = { fg = p.background1 },

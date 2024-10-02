@@ -3,7 +3,7 @@ local p = require('le-grand-bleu.palette')
 local le_grand_bleu = {}
 
 le_grand_bleu.normal = {
-  a = { fg = p.text, bg = p.blue0, gui = 'bold' },
+  a = { fg = p.text, bg = p.blue4, gui = 'bold' },
   b = { fg = p.text, bg = p.blue4 },
   c = { fg = p.text, bg = p.blue4 },
 }

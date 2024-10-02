@@ -344,6 +344,7 @@ function M.get(config)
     --
     --   -- rcarriga/nvim-notify
     NotifyINFOBorder            = { fg = g.blue },
+    NotifyINFOBody14            = { fg = g.rose, bg = g.yellow },
     NotifyINFOTitle             = { link = 'NotifyINFOBorder' },
     NotifyINFOIcon              = { link = 'NotifyINFOBorder' },
     NotifyWARNBorder            = { fg = g.dark_yellow },

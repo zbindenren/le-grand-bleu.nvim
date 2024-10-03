@@ -1,5 +1,3 @@
-local blend = require('le-grand-bleu.utils').blend
-
 local M = {}
 
 function M.get(config)

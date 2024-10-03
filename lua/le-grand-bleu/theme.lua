@@ -369,7 +369,23 @@ function M.get(config)
     NeogitDiffText                    = { link = 'DiffText' },
     NeogitDiffTextHighlight           = { link = 'DiffText' },
     NeogitDiffContextHighlight        = { link = 'Normal' },
+    --
+    --   -- yetone/avante.nvim
+    AvanteTitle                       = { fg = p.white, bg = g.dark_blue }, -- Title
+    AvanteReversedTitle               = { fg = g.dark_blue, bg = p.white }, -- Used for rounded border
+    AvanteSubtitle                    = { link = 'AvanteTitle' },           -- Selected code title
+    AvanteReversedSubtitle            = { link = 'AvanteReversedTitle' },   -- Used for rounded border
+    AvanteThirdTitle                  = { link = 'AvanteTitle' },           -- Prompt title
+    AvanteReversedThirdTitle          = { link = 'AvanteReversedTitle' },   -- Used for rounded border
+    AvantePopupHint                   = { link = 'DiagnosticHint' },        -- Usage hints in popup menus
+    AvanteInlineHint                  = { link = 'DiagnosticHint' },        -- The end-of-line hint displayed in visual mode
+    -- AvanteConflictCurrent             = {},                                 -- Current conflict highlight  Default to `Config.highlights.diff.current`
+    -- AvanteConflictIncoming            = {},                                 -- Incoming conflict highlight  Default to `Config.highlights.diff.incoming`
+    -- AvanteConflictCurrentLabel        = {},                                 -- Current conflict label highlight  Default to shade of `AvanteConflictCurrent`
+    -- AvanteConflictIncomingLabel       = {},                                 -- Incoming conflict label highlight  Default to shade of `AvanteConflictIncoming`
   }
+
+
   --
   -- vim.g.terminal_color_0 = p.background3 -- black
   -- vim.g.terminal_color_8 = p.background3 -- bright black

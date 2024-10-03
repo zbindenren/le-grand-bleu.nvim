@@ -173,6 +173,7 @@ function M.get(config)
 
     --   -- Treesitter
     ['@boolean']                      = { link = 'Identifier' },
+    ['@string.special.url.gomod']     = { link = 'Identifier' },
     ['@variable']                     = { link = 'Identifier' },
     ['@character']                    = { link = 'Identifier' },
     ['@character.special']            = { link = 'Identifier' },

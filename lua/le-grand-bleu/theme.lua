@@ -233,6 +233,15 @@ function M.get(config)
     ['@type']                         = { link = 'Identifier' },
     ['@variable.builtin']             = { link = 'Identifier' },
     --
+    --   -- markup
+    ['@markup.heading.1']             = { fg = p.blue0, bg = p.white },
+    ['@markup.heading.2']             = { fg = p.blue1, bg = p.white },
+    ['@markup.heading.3']             = { fg = p.blue2, bg = p.white },
+    ['@markup.heading.4']             = { fg = p.blue3, bg = p.white },
+    ['@markup.heading.5']             = { fg = p.blue3, bg = p.white },
+    ['@markup.heading.6']             = { fg = p.blue3, bg = p.white },
+
+    --
     --   -- lua
     luaTSConstructor                  = { link = 'Constant' },
     --
@@ -383,7 +392,30 @@ function M.get(config)
     -- AvanteConflictIncoming            = {},                                 -- Incoming conflict highlight  Default to `Config.highlights.diff.incoming`
     -- AvanteConflictCurrentLabel        = {},                                 -- Current conflict label highlight  Default to shade of `AvanteConflictCurrent`
     -- AvanteConflictIncomingLabel       = {},                                 -- Incoming conflict label highlight  Default to shade of `AvanteConflictIncoming`
+    --
+    --   -- MeanderingProgrammer/render-markdown.nvim
+    RenderMarkdownH1Bg                = { bg = p.blue4 },                  -- H1 background line
+    RenderMarkdownH2Bg                = { bg = p.blue4 },                  -- H2 background line
+    RenderMarkdownH3Bg                = { bg = p.blue4 },                  -- H3 background line
+    RenderMarkdownH4Bg                = { bg = p.blue4 },                  -- H4 background line
+    RenderMarkdownH5Bg                = { bg = p.blue4 },                  -- H5 background line
+    RenderMarkdownH6Bg                = { bg = p.blue4 },                  -- H6 background line
+    RenderMarkdownCode                = { bg = p.blue4 },                  -- Code block background
+    RenderMarkdownCodeInline          = { bg = p.blue4 },                  -- Inline code background
+    RenderMarkdownBullet              = { fg = p.blue2 },                  -- List item bullet points
+    RenderMarkdownQuote               = { link = 'RenderMarkdownBullet' }, -- Block quote marker
+    RenderMarkdownDash                = {},                                -- Thematic break line
+    RenderMarkdownLink                = { link = 'RenderMarkdownBullet' }, -- Image & hyperlink icons
+    RenderMarkdownSign                = {},                                -- Sign column background
+    RenderMarkdownMath                = {},                                -- LaTeX lines
+    RenderMarkdownUnchecked           = { link = 'RenderMarkdownBullet' }, -- Unchecked checkbox
+    RenderMarkdownChecked             = { link = 'RenderMarkdownBullet' }, -- Checked checkbox
+    RenderMarkdownInfo                = { link = 'DiagnosticInfo' },       -- Info related callouts
+    RenderMarkdownHint                = { link = 'DiagnosticHint' },       -- Hint related callouts
+    RenderMarkdownWarn                = { link = 'DiagnosticWarn' },       -- Warning related callouts
+    RenderMarkdownError               = { link = 'DiagnosticError' },      -- Error related callouts
   }
+
 
 
   --

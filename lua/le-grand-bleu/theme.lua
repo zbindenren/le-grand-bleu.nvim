@@ -240,6 +240,8 @@ function M.get(config)
     ['@markup.heading.4']             = { fg = p.blue3, bg = p.white },
     ['@markup.heading.5']             = { fg = p.blue3, bg = p.white },
     ['@markup.heading.6']             = { fg = p.blue3, bg = p.white },
+    ['@markup.italic']                = { fg = g.blue },
+    ['@markup.strikethrough']         = { style = 'strikethrough' },
 
     --
     --   -- lua
@@ -292,6 +294,7 @@ function M.get(config)
     --
     --   -- kyazdani42/nvim-tree.lua
     NvimTreeEmptyFolderName           = { fg = g.light_blue },
+    NvimTreeExecFile                  = { fg = g.green },
     NvimTreeFileDeleted               = { fg = g.dark_rose },
     NvimTreeFileDirty                 = { fg = g.blue },
     NvimTreeFileMerge                 = { fg = g.light_blue },
@@ -404,10 +407,7 @@ function M.get(config)
     RenderMarkdownCodeInline          = { bg = p.blue4 },                  -- Inline code background
     RenderMarkdownBullet              = { fg = p.blue2 },                  -- List item bullet points
     RenderMarkdownQuote               = { link = 'RenderMarkdownBullet' }, -- Block quote marker
-    RenderMarkdownDash                = {},                                -- Thematic break line
     RenderMarkdownLink                = { link = 'RenderMarkdownBullet' }, -- Image & hyperlink icons
-    RenderMarkdownSign                = {},                                -- Sign column background
-    RenderMarkdownMath                = {},                                -- LaTeX lines
     RenderMarkdownUnchecked           = { link = 'RenderMarkdownBullet' }, -- Unchecked checkbox
     RenderMarkdownChecked             = { link = 'RenderMarkdownBullet' }, -- Checked checkbox
     RenderMarkdownInfo                = { link = 'DiagnosticInfo' },       -- Info related callouts

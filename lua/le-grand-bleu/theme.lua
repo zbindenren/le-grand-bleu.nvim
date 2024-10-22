@@ -31,7 +31,7 @@ function M.get(config)
     diffChanged          = { link = 'DiffChange' },
     diffRemoved          = { link = 'DiffDelete' },
     Directory            = { fg = g.blue, bg = p.none },
-    ErrorMsg             = { fg = g.dark_rose, style = 'bold' },
+    ErrorMsg             = { fg = g.error, style = 'bold' },
     FloatBorder          = { fg = g.border },
     FloatTitle           = { fg = g.blue },
     FoldColumn           = { fg = g.blue },
@@ -114,7 +114,7 @@ function M.get(config)
     Bold                              = { style = 'bold' },
     Italic                            = { style = 'italic' },
 
-    Error                             = { fg = g.dark_rose }, -- (preferred) any erroneous construct
+    Error                             = { fg = g.error }, -- (preferred) any erroneous construct
     --
     --   qfLineNr = { fg = p.blueGray3 },
     --   qfFileName = { fg = p.blueGray2 },
@@ -317,6 +317,13 @@ function M.get(config)
     NvimTreeRootFolder                = { fg = g.blue },
     NvimTreeSpecialFile               = { link = 'NvimTreeNormal' },
     NvimTreeWindowPicker              = { fg = g.text, bg = g.light_blue },
+    --
+    --   -- nvim-neotest/neotest
+    NeotestFailed                     = { fg = g.error, style = 'bold' },
+    NeotestRunning                    = { fg = g.blue, style = 'bold' },
+    NeotestSkipped                    = { fg = g.dark_yellow, style = 'bold' },
+    NeotestUnknown                    = { fg = g.dark_yellow, style = 'bold' },
+    NeotestPassed                     = { fg = g.green, style = 'italic' },
     --
     --   -- folke/which-key.nvim
     WhichKey                          = { fg = g.text },

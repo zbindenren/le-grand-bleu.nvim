@@ -230,7 +230,7 @@ function M.get(config)
     ['@text.uri']                     = { link = 'Identifier' },
     ['@type.builtin']                 = { link = 'Identifier' },
     ['@type.definition']              = { link = 'Identifier' },
-    ['@type']                         = { link = 'Identifier' },
+    ['@type']                         = { fg = g.text, style = 'bold,italic' },
     ['@variable.builtin']             = { link = 'Identifier' },
     --
     --   -- markup
@@ -240,7 +240,7 @@ function M.get(config)
     ['@markup.heading.4']             = { fg = p.blue3, bg = p.white },
     ['@markup.heading.5']             = { fg = p.blue3, bg = p.white },
     ['@markup.heading.6']             = { fg = p.blue3, bg = p.white },
-    ['@markup.italic']                = { fg = g.blue },
+    ['@markup.italic']                = { fg = g.blue, style = 'italic' },
     ['@markup.strikethrough']         = { style = 'strikethrough' },
 
     --
@@ -293,7 +293,7 @@ function M.get(config)
     SignDelete                        = { link = 'GitSignsDelete' },
     --
     --   -- kyazdani42/nvim-tree.lua
-    NvimTreeEmptyFolderName           = { fg = g.light_blue },
+    NvimTreeEmptyFolderName           = { fg = g.grey },
     NvimTreeExecFile                  = { fg = g.green },
     NvimTreeFileDeleted               = { fg = g.dark_rose },
     NvimTreeFileDirty                 = { fg = g.blue },

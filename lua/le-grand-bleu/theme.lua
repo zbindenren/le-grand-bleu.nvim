@@ -56,7 +56,7 @@ function M.get(config)
     RedrawDebugClear     = { fg = p.white, bg = g.dark_rose },
     RedrawDebugComposed  = { fg = p.white, bg = g.black },
     RedrawDebugRecompose = { fg = p.white, bg = g.black },
-    Search               = { fg = p.white, bg = g.blue },
+    Search               = { link = 'IncSearch' },
     SpecialKey           = { fg = g.green },
     SpellBad             = { sp = g.dark_rose, style = 'undercurl' },
     SpellCap             = { sp = g.blue, style = 'undercurl' },
@@ -258,9 +258,9 @@ function M.get(config)
     cssTSError                        = { link = 'cssClassName' },
     --
     --   -- vim.lsp.buf.document_highlight()
-    LspReferenceText                  = { bg = g.blue },
-    LspReferenceRead                  = { bg = g.blue },
-    LspReferenceWrite                 = { bg = g.blue },
+    LspReferenceText                  = { link = 'IncSearch' },
+    LspReferenceRead                  = { link = 'IncSearch' },
+    LspReferenceWrite                 = { link = 'IncSearch' },
     --
     --   -- lsp-highlight-codelens
     LspCodeLens                       = { fg = g.blue },       -- virtual text of code lens

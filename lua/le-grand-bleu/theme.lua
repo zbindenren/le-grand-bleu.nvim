@@ -398,8 +398,8 @@ function M.get(config)
     AvanteReversedThirdTitle          = { link = 'AvanteReversedTitle' },   -- Used for rounded border
     AvantePopupHint                   = { link = 'DiagnosticHint' },        -- Usage hints in popup menus
     AvanteInlineHint                  = { link = 'DiagnosticHint' },        -- The end-of-line hint displayed in visual mode
-    -- AvanteConflictCurrent             = {},                                 -- Current conflict highlight  Default to `Config.highlights.diff.current`
-    -- AvanteConflictIncoming            = {},                                 -- Incoming conflict highlight  Default to `Config.highlights.diff.incoming`
+    AvanteConflictCurrent             = { link = 'DiffDelete' },                      -- Current conflict highlight  Default to `Config.highlights.diff.current`
+    AvanteConflictIncoming            = { link = 'DiffAdd' },                      -- Incoming conflict highlight  Default to `Config.highlights.diff.incoming`
     -- AvanteConflictCurrentLabel        = {},                                 -- Current conflict label highlight  Default to shade of `AvanteConflictCurrent`
     -- AvanteConflictIncomingLabel       = {},                                 -- Incoming conflict label highlight  Default to shade of `AvanteConflictIncoming`
     --

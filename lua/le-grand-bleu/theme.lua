@@ -424,7 +424,8 @@ function M.get(config)
 
 		--   -- folke/scnacks.nvim
 		SnacksPickerDir = { fg = g.text }, -- Otherwise not visible
-		-- SnacksPickerAuGroup               = { fg = g.text },                   -- Otherwise not visible
+
+		BlinkCmpGhostText = { fg = g.blue },
 	}
 
 	--
